@@ -170,7 +170,7 @@ p {
 }
 
 #home-info .info-img {
-  background: url("/img/photo12.jpg") no-repeat;
+  background: url("img/photo12.jpg") no-repeat;
   border: 5px solid #444;
 }
 
