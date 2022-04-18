@@ -1,0 +1,201 @@
+@import 'variables';
+
+// RESET
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7em;
+}
+a {
+    color: $dark-color;
+    text-decoration: none;
+  }
+  h1, h2, h3 {
+    padding-bottom: 20px;
+  }
+
+  p {
+    margin: 10px;
+  }
+  // SHARED CLASSES
+// Buttons
+%btn-shared {
+    display: inline-block;
+    font-size: 28px;
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .container {
+    margin: auto;
+    max-width: 1100px;
+    overflow: auto;
+    padding: 0px 20px;
+  }
+
+  // BUTTONS
+.btn {
+    &-light {
+      @extend %btn-shared;
+      background: $light-color;
+      color: $dark-color;
+    }
+    &-dark {
+        @extend %btn-shared;
+        background: $dark-color;
+        color: $light-color;
+      }
+}
+
+.bg-light {
+    background: $light-color;
+    color: $dark-color;
+  }
+  .bg-dark {
+    background: $dark-color;
+    color: $light-color;
+  }
+  .bg-secondary {
+    background: $secondary-color;
+    color: $dark-color;
+  }
+  .text-secondary {
+    color: #f7c08a;
+  }
+
+  #navbar {
+    color: $light-color;
+    .container{
+      overflow: hidden;
+    }
+    .flex-container-main{
+      display: flex;
+      justify-content: space-between;
+
+      a{
+        color: $light-color;
+      }
+
+      ul{
+        list-style: none;
+      }
+
+      h1{
+        padding-top: 20px;
+      }
+    }
+
+    .flex-container-li{
+      display: flex;
+      justify-content: space-between;
+      padding-top: 20px;
+
+      a{
+        padding: 23px;
+        text-align: center;
+      }
+
+      a:hover{
+        background: #444;
+        color: $secondary-color;
+      }
+    }
+  }
+
+  //showcaasee
+  #showcase {
+  background: url('/img/showcase1.jpg') no-repeat center /cover;
+  height: 600px;
+
+.flex-container-showcase{
+  color: $light-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 170px;
+
+  h1{
+    font-size: 60px;
+    line-height: 1.2em;
+  }
+  p{
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 170px;
+  }
+
+  a.btn-dark:hover{
+    background: $secondary-color;
+    color: $dark-color;
+    }
+   }
+}
+
+#home-info{
+  background: $dark-color;
+  color: $light-color;
+  height: 450px;
+
+  .grid-container-home-info-main{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .info-img{
+    background: url('/img/photo-1.jpg') no-repeat;
+    border: 5px solid #444;
+    
+  }
+  .info-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 450px;
+    text-align: center;
+    overflow: hidden;
+    
+
+    p{
+      padding-bottom: 30px;
+    }
+
+    a.btn-light:hover {
+      background: $secondary-color;
+    }
+  }
+}
+
+//featureszzz
+
+#features{
+  .grid-container-features{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+
+    .box{
+      padding: 50px;
+      text-align: center;
+
+      i{
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+// Main Footer
+#main-footer {
+  text-align: center;
+  background: #444;
+  color: aliceblue;
+  padding: 10px;
+}
+
